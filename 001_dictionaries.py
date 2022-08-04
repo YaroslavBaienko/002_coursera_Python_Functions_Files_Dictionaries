@@ -122,3 +122,95 @@ US_medals = {"Swimming": 33, "Gymnastics": 6, "Track & Field": 6, "Tennis": 3, "
              "Golf": 1, "Weightlifting": 1}
 
 fencing_value = US_medals['Fencing']
+
+# f = open('voina.txt', 'r')
+#
+# txt = f.read()
+#
+# txt = txt.split()
+#
+# chars = dict()
+# for c in txt:
+#     if c not in chars:
+#         chars[c] = 0
+#     chars[c] = chars[c] + 1
+#
+# print(chars)
+# f.close()
+
+
+sentence = "The dog chased the rabbit into the forest but the rabbit was too quick."
+
+words = sentence.split()
+words_count = dict()
+
+for word in words:
+    if word not in words_count:
+        words_count[word] = 0
+    words_count[word] = words_count[word] + 1
+
+print(words_count)
+
+stri = "what can I do"
+
+char_d = dict()
+for c in stri:
+    if c not in char_d:
+        char_d[c] = 0
+    char_d[c] = char_d[c] + 1
+
+print(char_d)
+
+place = """How do I exit all virtual environments and work on my system environment again? Right now, the only way I 
+have of getting back to me@mymachine:~$ is to exit the shell and start a new one. That's kind of annoying. Is there a 
+command to work on "nothing", and if so, what is it? If such a command does not exist, how would I go about creating 
+it? """
+
+d = {}
+
+for c in place:
+    if c not in d:
+        d[c] = 0
+    d[c] = d[c] + 1
+
+keys = list(d.keys())
+min_value = keys[0]
+
+for key in keys:
+    if d[key] < d[min_value]:
+        min_value = key
+
+max_value = keys[0]
+for key in keys:
+    if d[key] > d[max_value] and key != " ":
+        max_value = key
+
+print('"' + min_value + '"', 'used', d[min_value], 'times')
+print('"' + max_value + '"', 'used', d[max_value], 'times')
+
+f = open('voina.txt', 'r')
+
+txt = f.read()
+txt = txt.split()
+
+chars = dict()
+for c in txt:
+    if c not in chars:
+        chars[c] = 0
+    chars[c] = chars[c] + 1
+
+print(chars)
+keys = list(chars.keys())
+
+min_value_v = keys[0]
+for key in keys:
+    if chars[key] < chars[min_value_v]:
+        min_value_v = key
+
+max_value_v = keys[0]
+for key in keys:
+    if chars[key] > chars[
+        max_value_v] and key != "-" and key != " " and key != "и" and key != "в" and key != "не" and key != "на" and key != "он":
+        max_value_v = key
+print('"' + min_value_v + '"', 'used', chars[min_value_v], 'times')
+print('"' + max_value_v + '"', 'used', chars[max_value_v], 'times')
