@@ -1,6 +1,3 @@
-import numpy as np
-import pandas as pd
-
 eng2sp = dict()
 eng2sp['one'] = 'uno'
 eng2sp['two'] = 'dos'
